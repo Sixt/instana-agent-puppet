@@ -1,12 +1,12 @@
 {
-  "name": "instana-instana_agent",
+  "name": "sixt-instana_agent",
   "version": "1.0.2",
-  "author": "Stefan Staudenmeyer <stefan.staudenmeyer@instana.com>",
+  "author": "Martin Merfort <martin.merfort@sixt.com>",
   "summary": "Installs/Configures instana_agent",
   "license": "Apache-2.0",
-  "source": "https://github.com/instana/instana-agent-puppet",
-  "project_page": "https://github.com/instana/instana-agent-puppet",
-  "issues_url": "https://github.com/instana/instana-agent-puppet/issues",
+  "source": "https://github.com/sixt/instana-agent-puppet",
+  "project_page": "https://github.com/sixt/instana-agent-puppet",
+  "issues_url": "https://github.com/sixt/instana-agent-puppet/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
