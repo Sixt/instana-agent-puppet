@@ -34,6 +34,17 @@ com.instana.plugin.generic.hardware:
   enabled: true # disabled by default
 <% } %>
 
+# Ignore processes https://www.instana.com/docs/setup_and_manage/host_agent/configuration/#ignore-processes
+<% if $ignore_processes { %>
+com.instana.ignore:
+  <% $ignore_processes.each |$k, $v| { %>
+  <%= $k %>:
+    <%- $v.each |$x| { -%>
+    - <%= "'${x}'" %>
+    <% } %>
+  <% } %>
+<% } %>
+
 # Apache Httpd
 #com.instana.plugin.httpd:
 #  user: ''

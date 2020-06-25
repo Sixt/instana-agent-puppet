@@ -312,6 +312,37 @@ describe 'instana_agent' do
           end
         end
       end
+
+      describe 'with ignored processes' do
+        let(:params) do
+          {
+            key: 'testkey',
+            ignore_processes: {
+              processes: ['java'],
+              arguments: ['/usr/local/java/jmx/jmx_prometheus_httpserver.jar'],
+            },
+          }
+        end
+
+        describe 'main config' do
+          it do
+            is_expected.to contain_file(
+              '/opt/instana/agent/etc/instana/configuration.yaml',
+            )
+            verify_contents(
+              catalogue,
+              '/opt/instana/agent/etc/instana/configuration.yaml',
+              <<~YAML.split("\n")
+                com.instana.ignore:
+                  processes:
+                    - 'java'
+                  arguments:
+                    - '/usr/local/java/jmx/jmx_prometheus_httpserver.jar'
+              YAML
+            )
+          end
+        end
+      end
     end
   end
 end

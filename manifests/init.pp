@@ -73,6 +73,9 @@
 #   Number of http threads to use
 # @param use_cloud_provider_id
 #   Whether to use the id of the cloud provider
+# @param ignore_processes
+#   Disable monitoring for processes or arguments of processes
+#   For more information see https://www.instana.com/docs/setup_and_manage/host_agent/configuration#ignore-processes
 #
 class instana_agent(
   String                           $key,
@@ -108,7 +111,8 @@ class instana_agent(
   Boolean                          $manage_repository     = true,
   Integer                          $scheduler_threads     = 4,
   Integer                          $http_threads          = 4,
-  Boolean                          $use_cloud_provider_id = true
+  Boolean                          $use_cloud_provider_id = true,
+  Optional[Hash[String,Array]]     $ignore_processes      = undef,
 ) {
   contain instana_agent::install
   contain instana_agent::config
