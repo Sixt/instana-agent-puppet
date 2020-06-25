@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/instana/instana-agent-puppet.svg?branch=master)](https://travis-ci.org/instana/instana-agent-puppet)
+[![Build Status](https://travis-ci.org/Sixt/instana-agent-puppet.svg?branch=master)](https://travis-ci.org/Sixt/instana-agent-puppet)
 
 # instana-agent puppet module
 
@@ -29,7 +29,7 @@ See [our official documentation](https://docs.instana.com).
 
 ## License and Authors
 
-This module is being submitted and maintained under the [Apache v2.0 License](https://github.com/instana/cookbook/blob/master/LICENSE).
+This module is being submitted and maintained under the [Apache v2.0 License](LICENSE).
 
 * [Zachary Schneider](https://github.com/sigil66 "Zachary Schneider")
 * [Stefan Staudenmeyer](https://github.com/doerteDev "Stefan Staudenmeyer")
