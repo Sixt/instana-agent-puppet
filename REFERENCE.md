@@ -16,6 +16,10 @@ _Private Classes_
 * `instana_agent::required_config`: Additional configuration for the agent
 * `instana_agent::service`: Configure and start the agent service
 
+**Data types**
+
+* [`Instana_agent::Every`](#instana_agentevery): Instana time interval
+
 ## Classes
 
 ### instana_agent
@@ -306,4 +310,21 @@ Data type: `Boolean`
 Whether to use the id of the cloud provider
 
 Default value: `true`
+
+##### `ignore_processes`
+
+Data type: `Optional[Hash[String,Array]]`
+
+Disable monitoring for processes or arguments of processes
+For more information see https://www.instana.com/docs/setup_and_manage/host_agent/configuration#ignore-processes
+
+Default value: `undef`
+
+## Data types
+
+### Instana_agent::Every
+
+Instana time interval
+
+Alias of `Enum['DAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY']`
 

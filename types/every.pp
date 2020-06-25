@@ -1,3 +1,4 @@
+# Instana time interval
 type Instana_agent::Every = Enum[
   'DAY',
   'MONDAY',
