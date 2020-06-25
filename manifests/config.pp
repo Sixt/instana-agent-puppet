@@ -17,8 +17,9 @@ class instana_agent::config {
   file { "${dir}configuration.yaml":
     ensure  => 'file',
     content => epp('instana_agent/agent_configuration.epp', {
-      'tags' => $instana_agent::tags,
-      'zone' => $instana_agent::zone,
+      'tags'             => $instana_agent::tags,
+      'zone'             => $instana_agent::zone,
+      'ignore_processes' => $instana_agent::ignore_processes,
     }),
     group   => 'root',
     mode    => '0640',
