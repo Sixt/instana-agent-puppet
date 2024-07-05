@@ -69,6 +69,6 @@ class instana_agent::install {
     }
   }
   package { "instana-agent-${$instana_agent::flavor}":
-    ensure => 'installed',
+    ensure => 'latest',
   }
 }
